@@ -1,0 +1,19 @@
+{
+  "id": "order-execution-engine-env",
+  "name": "Order Execution Engine - Local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "enabled": true,
+      "type": "default"
+    },
+    {
+      "key": "orderId",
+      "value": "",
+      "enabled": true,
+      "type": "any"
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}
