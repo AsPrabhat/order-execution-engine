@@ -1,6 +1,6 @@
 {
   "name": "order-execution-engine",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Market Order execution engine with DEX routing between Raydium and Meteora",
   "main": "dist/server.js",
   "type": "module",

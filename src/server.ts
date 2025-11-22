@@ -97,22 +97,19 @@ const start = async () => {
     });
 
     console.log(`
-╔════════════════════════════════════════════════════════════════╗
-║         🚀 Order Execution Engine Started                     ║
-╠════════════════════════════════════════════════════════════════╣
-║ Environment: ${config.server.env.padEnd(47)}║
-║ Port: ${config.server.port.toString().padEnd(56)}║
-║ WebSocket: Enabled${' '.padEnd(45)}║
-║ Queue Concurrency: ${config.queue.concurrency.toString().padEnd(43)}║
-║ Max Retries: ${config.queue.maxRetries.toString().padEnd(49)}║
-╠════════════════════════════════════════════════════════════════╣
-║ Endpoints:                                                     ║
-║   POST   /api/orders/execute                                   ║
-║   GET    /api/orders/:orderId                                  ║
-║   GET    /api/orders                                           ║
-║   GET    /api/metrics                                          ║
-║   GET    /health                                               ║
-╚════════════════════════════════════════════════════════════════╝
+Server started successfully!
+Environment: ${config.server.env}
+Port: ${config.server.port}
+WebSocket: Enabled
+Queue Concurrency: ${config.queue.concurrency}
+Max Retries: ${config.queue.maxRetries}
+
+Available endpoints:
+  POST /api/orders/execute
+  GET  /api/orders/:orderId
+  GET  /api/orders
+  GET  /api/metrics
+  GET  /health
     `);
   } catch (error) {
     console.error('Failed to start server:', error);

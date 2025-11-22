@@ -27,14 +27,12 @@ export const orderQueue = new Queue('orders', {
 // DEX router instance
 const dexRouter = new MockDexRouter();
 
-/**
- * Process order job
- */
+// Process order job - this is where the main order execution logic happens
 async function processOrder(job: Job<{ orderId: string }>): Promise<void> {
   const { orderId } = job.data;
 
   try {
-    // Get order from database
+    // Fetch order from database
     const order = await OrderModel.getById(orderId);
     if (!order) {
       throw new Error(`Order ${orderId} not found`);

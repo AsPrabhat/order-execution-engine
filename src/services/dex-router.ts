@@ -5,9 +5,11 @@ import { sleep, generateMockTxHash, applyPriceVariance, randomDelay } from '../u
 /**
  * Mock DEX Router for simulating Raydium and Meteora interactions
  * Provides realistic price quotes with variance and simulated execution delays
+ * TODO: Replace with real SDK integration for production
  */
 export class MockDexRouter {
   // Base price mapping for common token pairs (SOL as base)
+  // These are just mock prices for testing
   private readonly basePrices: Record<string, number> = {
     'SOL-USDC': 100.0,
     'SOL-USDT': 100.0,
@@ -167,24 +169,10 @@ export class MockDexRouter {
     priceImprovement: number
   ): void {
     console.log(`
-╔════════════════════════════════════════════════════════════════╗
-║                     DEX ROUTING DECISION                       ║
-╠════════════════════════════════════════════════════════════════╣
-║ Order ID: ${orderId.padEnd(50)}║
-╠════════════════════════════════════════════════════════════════╣
-║ Raydium Quote:                                                 ║
-║   Price: ${raydiumQuote.price.toFixed(6).padEnd(49)}║
-║   Fee: ${(raydiumQuote.fee * 100).toFixed(2)}%${' '.padEnd(50)}║
-║   Output: ${raydiumQuote.estimatedOutput.toFixed(6).padEnd(48)}║
-╠════════════════════════════════════════════════════════════════╣
-║ Meteora Quote:                                                 ║
-║   Price: ${meteoraQuote.price.toFixed(6).padEnd(49)}║
-║   Fee: ${(meteoraQuote.fee * 100).toFixed(2)}%${' '.padEnd(50)}║
-║   Output: ${meteoraQuote.estimatedOutput.toFixed(6).padEnd(48)}║
-╠════════════════════════════════════════════════════════════════╣
-║ Selected: ${selectedDex.toUpperCase().padEnd(52)}║
-║ Price Improvement: ${priceImprovement.toFixed(3)}%${' '.padEnd(40)}║
-╚════════════════════════════════════════════════════════════════╝
+[DEX ROUTING] Order ${orderId}
+Raydium: price=${raydiumQuote.price.toFixed(6)}, fee=${(raydiumQuote.fee * 100).toFixed(2)}%, output=${raydiumQuote.estimatedOutput.toFixed(6)}
+Meteora: price=${meteoraQuote.price.toFixed(6)}, fee=${(meteoraQuote.fee * 100).toFixed(2)}%, output=${meteoraQuote.estimatedOutput.toFixed(6)}
+Selected: ${selectedDex.toUpperCase()} (${priceImprovement.toFixed(3)}% improvement)
     `);
   }
 }
