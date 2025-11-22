@@ -1,0 +1,44 @@
+{
+  "name": "order-execution-engine",
+  "version": "1.0.0",
+  "description": "Market Order execution engine with DEX routing between Raydium and Meteora",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src tests --ext .ts"
+  },
+  "keywords": [
+    "solana",
+    "dex",
+    "order-execution",
+    "raydium",
+    "meteora",
+    "websocket"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.25.2",
+    "@fastify/websocket": "^10.0.0",
+    "bullmq": "^5.1.0",
+    "ioredis": "^5.3.2",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@types/pg": "^8.10.9",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0",
+    "vitest": "^1.1.0",
+    "@vitest/coverage-v8": "^1.1.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0"
+  }
+}
