@@ -186,7 +186,3 @@ Demo video: [To be uploaded]
 - Postman collection in `postman/` folder
 - [Raydium SDK](https://github.com/raydium-io/raydium-sdk-V2-demo)
 - [Meteora Docs](https://docs.meteora.ag/)
-
-## License
-
-MIT
