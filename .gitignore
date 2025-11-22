@@ -35,9 +35,6 @@ coverage/
 # Temporary files
 *.tmp
 temp/
-docs/
-plan.md
-workflow.md
 
 # Redis dump
 dump.rdb

@@ -25,7 +25,7 @@ You need Node.js 18+ and Docker installed.
 
 1. Clone and install:
 ```bash
-git clone <repo-url>
+git clone https://github.com/AsPrabhat/order-execution-engine
 cd order-execution-engine
 npm install
 ```
@@ -179,7 +179,7 @@ MAX_RETRIES=3
 
 ## Demo Video
 
-Demo video: [To be uploaded]
+[Order Execution Engine with DEX Routing](https://youtu.be/66qZT-8jyjg)
 
 ## Resources
 
