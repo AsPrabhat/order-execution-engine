@@ -130,7 +130,6 @@ order-execution-engine/
 │       ├── redis.ts           # Redis client
 │       └── database.ts        # PostgreSQL client
 ├── tests/                     # Unit and integration tests
-├── docs/                      # Step-by-step documentation
 └── postman/                   # Postman collection
 ```
 
